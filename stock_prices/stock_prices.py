@@ -2,8 +2,31 @@
 
 import argparse
 
+arr = [1050, 270, 1540, 3800, 2]
+
 def find_max_profit(prices):
-  pass
+	max_profit = -9999999999999
+	
+
+	for i in reversed(range(0, len(prices))):
+
+		for j in reversed(range(0, len(prices))):
+
+			# skips the current or previous indexes
+			if j >= i:
+				pass
+			else:
+				if (prices[i] - prices[j]) > max_profit:
+					max_profit = prices[i] - prices[j]
+	return max_profit
+
+
+			
+
+	
+
+
+find_max_profit(arr)
 
 
 if __name__ == '__main__':
